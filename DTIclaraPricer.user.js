@@ -27,16 +27,13 @@ function main() {
     // Customize
     if(document.URL.indexOf("net/wardrobe") != -1) {
         custom();
-        window.onhashchange = function() {  // whenever the search changes
-            custom();
-        };
+        window.onhashchange = function() { custom(); };  // whenever the search changes
     }
     // User Profile
     if(document.URL.indexOf("net/user") != -1) {
         $("img[src*='/items/']").each(function(k,v) {
             if ($(v).parent().find(".nc-icon").length) {
                 itemName = $(v).parent().find(".name").text();
-                console.log(itemName);
                 getWorth(itemName, $(v));
             }
         });
@@ -45,7 +42,6 @@ function main() {
     if(document.URL.indexOf("net/items") != -1) {
         if ($("img[src*='/items/']").parent().find(".nc-icon").length) {
             itemName = $("#item-name").text();
-            console.log(itemName);
             getWorth(itemName, $("#item-name"));
         }
     }
