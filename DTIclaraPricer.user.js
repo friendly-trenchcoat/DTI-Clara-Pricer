@@ -27,10 +27,10 @@ function main() {
     // Customize
     if(document.URL.indexOf("net/wardrobe") != -1) {
         custom();
-        window.onhashchange = function() { custom(); };  // whenever the search changes
+        window.onhashchange = custom;  // whenever the page changes, refresh the prices
     }
-    // User Profile
-    if(document.URL.indexOf("net/user") != -1) {
+    // User Profile & Outfit Page
+    if(document.URL.indexOf("net/user") != -1 || document.URL.indexOf("net/outfit") != -1) {
         $("img[src*='/items/']").each(function(k,v) {
             if ($(v).parent().find(".nc-icon").length) {
                 itemName = $(v).parent().find(".name").text();
