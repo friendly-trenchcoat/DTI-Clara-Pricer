@@ -9,7 +9,8 @@
 var itemName, itemWorth, regex;
 function getWorth(name, element){
     regex = new RegExp(name + " [^~]*~([0-9,\-]*)");
-    itemWorth = items.match(regex)[1];
+    if(regex.test(items)) { itemWorth = items.match(regex)[1]; }
+    else { itemWorth = '?'; }
     element.after("<span class='clara'>" + itemWorth.bold() + "<br></span>");
 }
 function custom(){
