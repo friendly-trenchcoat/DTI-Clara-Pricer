@@ -47,6 +47,7 @@ function main() {
         }
     }
 }
+// Don't scroll down.
 var items = "A \
  \
 A Heros Welcome Background ~1-2 \
@@ -8613,4 +8614,5 @@ Zylphio Inspired Wig ~2-4 \
 9th Birthday Flower Cupcake NT  \
 9th Birthday Night Wish Candle buyable through July 31, 2016 ~1 \
 9th Birthday Parfait ~2 ";
+// You're not good at following directions.
 main();
